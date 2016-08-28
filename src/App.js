@@ -61,10 +61,14 @@ class App extends React.Component {
         return <Card flipCard={this.flipCard} value={card} up={up} index={index} key={index} />
       })
       return <div>
-        <h1>Class doing memory____TOGETHHHHHHHER!!!!</h1>
+      <div className="container">
+      <img src="src/images/background.png" alt="Header Image" />
+      <h1>PunchOut Memory</h1>
         <main>
+          <p>Click on a tile to reveal an image. Each tile has a match: try to remember where they are, you need to match them all to win!</p>
           {cards}
         </main>
+      </div>
       </div>
     } else {
       return <div>

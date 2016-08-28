@@ -69,23 +69,21 @@ class App extends React.Component {
       })
       return <div>
       <div className="container">
-        <img src="https://i.imgsafe.org/251f3db24d.png" alt="Header Image" />
+        <img src="https://i.imgsafe.org/3698321f30.png" width="860px" height="auto" alt="Header Image" />
           <div className="centeredcontent">
             <h1>PunchOut Memory</h1>
             <main>
-            <div className="instructions">Click on a tile to reveal an image. Each tile has a match: try to remember where they are, you need to match them all to win!</div>
-            {cards}
+            <div className="instructions">Click on a card to reveal a fighter from Mike Tyson's Punchout. Each fighter has a match. Match all fighters to win!</div>
+            <div>{cards}</div>
             </main>
           </div>
       </div>
-        <div className="footercontainer">
-          <div className="logotype"><h1>PunchOut Memory</h1></div>
-          <div className="tiy">A Javascript exercise by <a href="https://www.linkedin.com/in/darren-clark-4390745">Darren Clark</a></div>
-        </div>
       </div>
     } else {
       return <div>
-        <h1> YOU WIN!! </h1>
+      <body>
+        <h1> YOU WIN!!</h1>
+      </body>
       </div>
     }
   }

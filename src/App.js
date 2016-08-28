@@ -33,16 +33,23 @@ class App extends React.Component {
     super()
     this.state = {
       cards: [
-        'Jake',
-        'Princess Bubbelgum',
-        'Finn',
-        'BMO',
-        'Ice King',
-        'Jake',
-        'Princess Bubbelgum',
-        'Finn',
-        'BMO',
-        'Ice King'
+        'https://i.imgsafe.org/25138bd2f4.png',
+        'https://i.imgsafe.org/251395bcc2.png',
+        'https://i.imgsafe.org/25139b9817.png',
+        'https://i.imgsafe.org/2513a4b2f1.png',
+        'https://i.imgsafe.org/2513b3e44c.png',
+        'https://i.imgsafe.org/2513bd4863.png',
+        'https://i.imgsafe.org/2513c45f03.png',
+        'https://i.imgsafe.org/2513d04581.png',
+        'https://i.imgsafe.org/2513ed715a.png',
+        'https://i.imgsafe.org/2513ead212.png',
+        'https://i.imgsafe.org/2513f89061.png',
+        'https://i.imgsafe.org/2513fd3ddd.png',
+        'https://i.imgsafe.org/2514129938.png',
+        'https://i.imgsafe.org/25141ad3d7.png',
+        'https://i.imgsafe.org/25142afead.png',
+        'https://i.imgsafe.org/2514228b0b.png',
+        'https://i.imgsafe.org/25138bd2f4.png',
       ],
       matched: [],
       turned: [],
@@ -86,12 +93,14 @@ class App extends React.Component {
       })
       return <div>
       <div className="container">
-      <img src="https://i.imgsafe.org/251f3db24d.png" alt="Header Image" />
-      <h1>PunchOut Memory</h1>
-        <main>
-          <div className="instructions">Click on a tile to reveal an image. Each tile has a match: try to remember where they are, you need to match them all to win!</div>
-          {cards}
-        </main>
+        <img src="https://i.imgsafe.org/251f3db24d.png" alt="Header Image" />
+          <div className="centeredcontent">
+            <h1>PunchOut Memory</h1>
+            <main>
+            <div className="instructions">Click on a tile to reveal an image. Each tile has a match: try to remember where they are, you need to match them all to win!</div>
+            {cards}
+            </main>
+          </div>
       </div>
         <div className="footercontainer">
           <div className="logotype"><h1>PunchOut Memory</h1></div>

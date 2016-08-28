@@ -1,56 +1,32 @@
 import React from 'react'
 import './style.sass'
 import Card from './Card'
-// BOSS IMAGE IMPORTS
-// BOSS IMAGE IMPORTS
-// BOSS IMAGE IMPORTS
-      // import Boss0 from <img src= "https://i.imgsafe.org/25138bd2f4.png"/>
-      // import Boss1 from <img src= "https://i.imgsafe.org/251395bcc2.png"/>
-      // import Boss2 from <img src= "https://i.imgsafe.org/25139b9817.png"/>
-      // import Boss3 from <img src= "https://i.imgsafe.org/2513a4b2f1.png"/>
-      // import Boss4 from <img src= "https://i.imgsafe.org/2513b3e44c.png"/>
-      // import Boss5 from <img src= "https://i.imgsafe.org/2513bd4863.png"/>
-      // import Boss6 from <img src= "https://i.imgsafe.org/2513c45f03.png"/>
-      // import Boss7 from <img src= "https://i.imgsafe.org/2513d04581.png"/>
-      // import Boss8 from <img src= "https://i.imgsafe.org/2513ed715a.png"/>
-      // import Boss9 from <img src= "https://i.imgsafe.org/2513ead212.png"/>
-      // import Boss10 from <img src= "https://i.imgsafe.org/2513f89061.png"/>
-      // import Boss11 from <img src= "https://i.imgsafe.org/2513fd3ddd.png"/>
-      // import Boss12 from <img src= "https://i.imgsafe.org/2514129938.png"/>
-      // import Boss13 from <img src= "https://i.imgsafe.org/25141ad3d7.png"/>
-      // import Boss14 from <img src= "https://i.imgsafe.org/25142afead.png"/>
-      // import Boss15 from <img src= "https://i.imgsafe.org/2514228b0b.png"/>
-      // import Boss16 from <img src= "https://i.imgsafe.org/25138bd2f4.png"/>
-// BOSS IMAGE IMPORTS
-// BOSS IMAGE IMPORTS
-// BOSS IMAGE IMPORTS
 const SHOW_CARD = 2000
-
+const cardarray1= [
+  'https://i.imgsafe.org/25138bd2f4.png',
+  'https://i.imgsafe.org/251395bcc2.png',
+  'https://i.imgsafe.org/25139b9817.png',
+  'https://i.imgsafe.org/2513a4b2f1.png',
+  'https://i.imgsafe.org/2513b3e44c.png',
+  'https://i.imgsafe.org/2513bd4863.png',
+  'https://i.imgsafe.org/2513c45f03.png',
+  'https://i.imgsafe.org/2513d04581.png',
+  'https://i.imgsafe.org/2513ed715a.png',
+  'https://i.imgsafe.org/2513ead212.png',
+  'https://i.imgsafe.org/2513f89061.png',
+  'https://i.imgsafe.org/2513fd3ddd.png',
+  'https://i.imgsafe.org/2514129938.png',
+  'https://i.imgsafe.org/25141ad3d7.png',
+  'https://i.imgsafe.org/25142afead.png',
+  'https://i.imgsafe.org/2514228b0b.png',
+]
 
 class App extends React.Component {
 
   constructor () {
     super()
     this.state = {
-      cards: [
-        'https://i.imgsafe.org/25138bd2f4.png',
-        'https://i.imgsafe.org/251395bcc2.png',
-        'https://i.imgsafe.org/25139b9817.png',
-        'https://i.imgsafe.org/2513a4b2f1.png',
-        'https://i.imgsafe.org/2513b3e44c.png',
-        'https://i.imgsafe.org/2513bd4863.png',
-        'https://i.imgsafe.org/2513c45f03.png',
-        'https://i.imgsafe.org/2513d04581.png',
-        'https://i.imgsafe.org/2513ed715a.png',
-        'https://i.imgsafe.org/2513ead212.png',
-        'https://i.imgsafe.org/2513f89061.png',
-        'https://i.imgsafe.org/2513fd3ddd.png',
-        'https://i.imgsafe.org/2514129938.png',
-        'https://i.imgsafe.org/25141ad3d7.png',
-        'https://i.imgsafe.org/25142afead.png',
-        'https://i.imgsafe.org/2514228b0b.png',
-        'https://i.imgsafe.org/25138bd2f4.png',
-      ],
+      cards: cardarray1.concat(cardarray1),
       matched: [],
       turned: [],
       win: false
@@ -88,7 +64,7 @@ class App extends React.Component {
   render () {
     if (!this.state.win) {
       const cards = this.state.cards.map((card, index) => {
-        const up = (this.state.turned + this.state.matched).includes(index)
+        const up = !this.state.turned.includes(index) ? this.state.matched.includes(index): this.state.turned.includes(index)
         return <Card flipCard={this.flipCard} value={card} up={up} index={index} key={index} />
       })
       return <div>
@@ -104,7 +80,7 @@ class App extends React.Component {
       </div>
         <div className="footercontainer">
           <div className="logotype"><h1>PunchOut Memory</h1></div>
-          <div className="tiy">A Javascript exercise by <a href="https://www.linkedin.com/in/darren-clark-4390745"> Darren Clark</a></div>
+          <div className="tiy">A Javascript exercise by <a href="https://www.linkedin.com/in/darren-clark-4390745">Darren Clark</a></div>
         </div>
       </div>
     } else {

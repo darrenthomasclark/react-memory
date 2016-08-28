@@ -18,25 +18,24 @@ h1
   margin-top: 0
 
 .card
-  border: solid 1px white
-    radius: 1px
   height: 100px
   width: 100px
   text-align: center
   line-height: 100px
+  margin: 0
   &.up
     background-color: white
-    color: purple
+    border: solid 1px
+    outline-offset: -2px
+    -moz-box-shadow: inset 0 0 10px #000000
+    -webkit-box-shadow: inset 0 0 10px #000000
+    box-shadow: inset 0 0 10px #000000
   &.down
     background-color: purple
     color: transparent
 
+
 main
-  display: flex
-  flex:
-    direction: row
-    wrap: wrap
-  justify-content: space-around
 
 .footercontainer
   display: flex
@@ -103,4 +102,3 @@ main
   display: flex
   flex-direction: column
   justify-content: space-between
-  align-items: center

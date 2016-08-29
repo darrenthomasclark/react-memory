@@ -50,18 +50,16 @@ h1
   line-height: 1.5em
 
 .container
-  border-style: solid
-  border-width: 1px
-  padding: 0
   height: 100%
   width: 860px
+  border: 1px solid white
   display: flex
   flex-direction: column
   align-items: center
   background-color: #22d464
-  -webkit-box-shadow: 10px 14px 20px -10px rgba(0, 0, 0, 1)
-  -moz-box-shadow: 10px 14px 20px -10px rgba(0, 0, 0, 1)
-  box-shadow: 10px 14px 20px -10px rgba(0, 0, 0, 1)
+  -webkit-box-shadow: 0 0 10px 5px #000000
+  box-shadow: 0 0 10px 5px #000000
+
 
 .logotype
   margin-left: 25px
@@ -72,35 +70,62 @@ h1
     line-height: 0px
     margin: 0px
 
-.tiy
-  font-family: 'Open Sans', sans-serif
-  font-size: 12px
-  color: black
-  margin-right: 25px
-  display: flex
-  justify-content: space-between
-  a
-    &:link
-      font-family: 'Open Sans', sans-serif
-      font-size: 12px
-      color: black
-
-    &:hover
-      font-family: 'Open Sans', sans-serif
-      font-size: 12px
-      color: black
-      text-decoration: underline
-
-    &:visited
-      font-family: 'Open Sans', sans-serif
-      font-size: 12px
-      color: black
-
 .centeredcontent
   display: flex
   flex-direction: column
   justify-content: space-between
   text-align: center
 
-  main
+main
   margin-bottom: 50px
+
+.tkobutton
+  padding: 5px
+  padding-top: 15px
+  padding-bottom: 15px
+  background-color: #44a255
+  border: 1px solid white
+  border-radius: 5px
+  font: 100% $font-stack
+  color: white
+  max-width: 25%
+  text-align: center
+  margin-top: 25px
+  margin-bottom: 25px
+  -webkit-box-shadow: 0 0 5px 5px #000000
+  box-shadow: 0 0 5px 5px #000000
+
+.towelbutton
+  padding: 5px
+  padding-top: 15px
+  padding-bottom: 15px
+  background-color: #192453
+  border: 1px solid white
+  border-radius: 5px
+  font: 100% $font-stack
+  color: white
+  max-width: 25%
+  text-align: center
+  margin-top: 25px
+  margin-bottom: 25px
+  margin-left: 25px
+  -webkit-box-shadow: 0 0 5px 5px #000000
+  box-shadow: 0 0 5px 5px #000000
+
+.bottombuttons
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+
+.copyright
+  color: white
+  font-family: arial, sans-serif
+  font-size: 10px
+  margin-left: 20px
+
+.copyright2
+  color: white
+  font-family: arial, sans-serif
+  font-size: 10px
+  margin-left: 30px

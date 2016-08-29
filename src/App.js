@@ -78,6 +78,14 @@ class App extends React.Component {
             </main>
           </div>
       </div>
+      <div className="bottombuttons">
+        <div className="tkobutton">T.K.O.</div>
+        <div className="towelbutton">Throw in the towel</div>
+        <div className="copyrightcontainer">
+          <div className="copyright">© 2016 Nintendo. Games are property of their respective owners.</div>
+          <div className="copyright2">Nintendo of America Inc. Headquarters are in Redmond, Washington</div>
+          </div>
+      </div>
       </div>
     } else {
       return <div>
